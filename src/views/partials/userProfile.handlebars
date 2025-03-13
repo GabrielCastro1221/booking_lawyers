@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/userProfile.css">
+
+<h1 class="title">Perfil de usuario</h1>
+<section class="container">
+    <div class="buttons">
+        <button class="btns green" data-category="profile">Mi Perfil</button>
+        <button class="btns green" data-category="edit">Editar Perfil</button>
+        <button class="btns red" data-category="logout">Cerrar sesión</button>
+        <button class="btns red" data-category="delete">Eliminar cuenta</button>
+    </div>
+
+    <div class="content">
+        <div class="info" data-category="profile">
+            {{> userProfileInfo}}
+        </div>
+        <div class="edit" data-category="edit" style="display: none;">
+            {{> userProfileEdit}}
+        </div>
+        <div class="citas" data-category="citas" style="display: none;">
+            {{> userProfileAppointments}}
+        </div>
+    </div>
+</section>
+
+<script src="/js/userProfile.js"></script> 

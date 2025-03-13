@@ -1,0 +1,55 @@
+<div class="profile-header">
+    <figure class="profile-image">
+        <img src="{{lawyer.photo}}" alt={{lawyer.name}} id="doctor-photo" class="image" />
+    </figure>
+
+    <div class="profile-info">
+        <span id="specialization" class="specialization">{{lawyer.specialization}}</span>
+        <h3 id="doctor-name" class="doctor-name">{{lawyer.name}}</h3>
+        <p id="bio" class="bio">{{lawyer.bio}}</p>
+        <div class="mt-3 contact-btn">
+            <a class="contact-doctor-link" style="font-size: small;"
+                href="https://api.whatsapp.com/send?phone={{lawyer.phone}}">
+                Contactar Abogado
+            </a>
+        </div>
+    </div>
+
+    <div id="side-panel" class="side-panel">
+        <div class="appointment-container">
+            <div class="appointment-panel">
+                <div class="price-container">
+                    <p class="price-text">${{lawyer.ticket_price}} COP</p>
+                </div>
+                <select class="date-select">
+                    <option value="">Horarios Disponibles</option>
+                    {{#each lawyer.timeSlots}}
+                    <option value="{{day}} {{startingTime}} - {{endingTime}}">
+                        {{day}}:
+                        {{startingTime}}
+                        -
+                        {{endingTime}}
+                    </option>
+                    {{/each}}
+                </select>
+                <input type="text" name="doctorId" value="{{lawyer._id}}" id="doctorId" readonly
+                    style="display: none;" />
+                <input type="text" name="userId" id="userId" readonly style="display: none;" />
+
+                <div class="appointment-type">
+                    <label class="appointment-label">
+                        <input type="radio" name="appointmentType" value="presencial" />
+                        Cita presencial
+                    </label>
+                    <label class="appointment-label">
+                        <input type="radio" name="appointmentType" value="online" />
+                        Cita online
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">
+                    Agendar cita
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

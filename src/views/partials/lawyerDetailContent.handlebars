@@ -1,0 +1,39 @@
+<p class="info-title">Acerca de <span class="info-name">{{lawyer.name}}</span></p>
+<div class="info-container">
+    <p class="about">{{lawyer.about}}</p>
+    <div class="container-cards">
+        <div class="education-section">
+            <h3 class="section-title">Educación</h3>
+            <ul class="education-list">
+                {{#each lawyer.education}}
+                <li class="education-item">
+                    <div>
+                        <span class="date">{{this.startingDate}}
+                            -
+                            {{this.endingDate}}</span>
+                        <span class="date">{{this.date}}</span>
+                        <p class="degree">{{this.degree}}</p>
+                    </div>
+                    <p class="university">{{this.university}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="experience-section">
+            <h3 class="section-title">Experiencia</h3>
+            <ul class="experience-list">
+                {{#each lawyer.experiences}}
+                <li class="experience-item">
+                    <div>
+                        <span class="date">{{this.startingDate}}
+                            -
+                            {{this.endingDate}}</span>
+                        <p class="position">{{this.position}}</p>
+                    </div>
+                    <p class="hospital">{{this.hospital}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+.lawyer-content {
+    margin-top: 100px;
+}
+
+.info-wrapper {
+    display: flex;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.btns {
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .red {
+    background-color: var(--btn-red-clr);
+    color: var(--light-clr);
+}
+
+.buttons .red:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-red-clr);
+    font-weight: 600;
+}
+
+.buttons .green {
+    background-color: var(--btn-green-clr);
+    color: var(--light-clr);
+}
+
+.buttons .green:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-green-clr);
+    font-weight: 600;
+}
+
+.lawyer-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.lawyer-profile__header__image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.l {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lawyer-profile__header__info {
+    margin-top: 20px;
+}
+
+.lawyer-profile__content {
+    margin-bottom: 10px;
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    width: 40%;
+}
+
+.btns-lawyer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.appointment-btn {
+    padding: 8px;
+    margin-top: 10px;
+    background-color: var(--btn-green-clr);
+    color: var(--light-clr);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appointment-btn:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-green-clr);
+    font-weight: 600;
+}

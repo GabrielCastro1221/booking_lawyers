@@ -1,0 +1,106 @@
+.title {
+    margin-top: 90px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-clr);
+}
+
+section {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.btns {
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.buttons .red {
+    background-color: var(--btn-red-clr);
+    color: var(--light-clr);
+}
+
+.buttons .red:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-red-clr);
+    font-weight: 600;
+}
+
+.buttons .green {
+    background-color: var(--btn-green-clr);
+    color: var(--light-clr);
+}
+
+.buttons .green:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-green-clr);
+    font-weight: 600;
+}
+
+.info,
+.edit {
+    width: 75%;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.name h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--title-clr);
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    width: 150%;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-content p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--p-clr);
+}
+
+.btn-appointments {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--btn-green-clr);
+    color: var(--light-clr);
+    cursor: pointer;
+}
+
+.btn-appointments:hover {
+    background-color: var(--light-clr);
+    color: var(--btn-green-clr);
+    font-weight: 600;
+}
