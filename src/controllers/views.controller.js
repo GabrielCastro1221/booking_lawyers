@@ -93,6 +93,30 @@ class ViewsController {
       res.send("error al renderizar 404 page");
     }
   };
+
+  renderEmailConfirm = (req, res) => {
+    try {
+      res.render("emailConfirm");
+    } catch (error) {
+      res.send("error al renderizar confirmación de email");
+    }
+  };
+
+  renderResetPass = (req, res) => {
+    try {
+      res.render("resetPass");
+    } catch (error) {
+      res.send("error al renderizar resetPass");
+    }
+  };
+
+  renderChangePass = (req, res) => {
+    try {
+      res.render("changePass");
+    } catch (error) {
+      res.send("error al renderizar changePass");
+    }
+  };
 }
 
 module.exports = ViewsController;

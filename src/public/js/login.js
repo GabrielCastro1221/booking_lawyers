@@ -1,23 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const signUpBtn = document.getElementById("SignUpBtn");
+  const signInBtn = document.getElementById("SignInBtn");
 
-  signUpBtn.addEventListener("click", async (event) => {
+  signInBtn.addEventListener("click", async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const role = document.querySelector("select[name='role']").value;
 
     const data = {
-      name,
       email,
       password,
-      role,
     };
 
     try {
-      const response = await fetch("/api/v1/auth/register", {
+      const response = await fetch("/api/v1/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,8 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
         }).showToast();
 
+        localStorage.setItem("user", JSON.stringify(result.data));
+        localStorage.setItem("token", result.token);
+
         setTimeout(() => {
-          window.location.href = "/login";
+          switch (result.data.role) {
+            case "usuario":
+              window.location.href = "/perfil-usuario";
+              break;
+            case "abogado":
+              window.location.href = "/perfil-abogado";
+              break;
+            case "admin":
+              window.location.href = "/perfil-admin";
+              break;
+            default:
+              console.error("Rol desconocido:", result.data.role);
+          }
         }, 3000);
       } else {
         Toastify({
@@ -50,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (error) {
       Toastify({
-        text: "Ocurrió un error al registrar el usuario",
+        text: "Ocurrió un error al iniciar sesión",
         duration: 3000,
         gravity: "top",
         position: "right",

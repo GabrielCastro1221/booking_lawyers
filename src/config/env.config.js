@@ -8,6 +8,7 @@ const configObject = {
   server: {
     port: process.env.PORT || 5000,
     mongo_url: process.env.MONGO_URL,
+    base_url: process.env.BASE_URL,
   },
   auth: {
     jwt_secret: process.env.JWT_SECRET,

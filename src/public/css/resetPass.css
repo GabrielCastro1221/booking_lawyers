@@ -1,0 +1,78 @@
+.section-padding {
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    color: var(--primary-clr);
+    margin-left: 5px;
+}
+
+.form {
+    padding: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--title-clr);
+    border-radius: 5px;
+    font-size: 18px;
+    color: var(--title-clr);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--title-clr);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-clr);
+    color: var(--form-bg);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-clr);
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--p-clr);
+    font-size: 1.3rem;
+}
+
+.link {
+    color: var(--primary-clr);
+    font-weight: 500;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--title-clr);
+}
+
+.error {
+    color: var(--btn-red-clr)
+}

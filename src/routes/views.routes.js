@@ -14,5 +14,8 @@ router.get("/sobre-nosotros", views.renderAbout);
 router.get("/perfil-usuario", views.renderUserProfile);
 router.get("/perfil-abogado", views.renderLawyerProfile);
 router.get("/404", views.renderNotFound);
+router.get("/confirm", views.renderEmailConfirm);
+router.get("/reset-password", views.renderResetPass);
+router.get("/change-password", views.renderChangePass);
 
 module.exports = router;

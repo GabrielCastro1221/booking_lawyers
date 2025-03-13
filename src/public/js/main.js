@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const playIcon = document.querySelector(".play-icon");
   const videoPlayer = document.querySelector(".video-player");
   const video = videoPlayer ? videoPlayer.querySelector("video") : null;
-
-  console.log(menuIcon, navMenu, playIcon, videoPlayer, video);
+  const loginButton = document.querySelector(".btn a");
 
   if (menuIcon && navMenu) {
     menuIcon.addEventListener("click", function () {
@@ -27,5 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
         videoPlayer.classList.add("hide");
       }
     });
+  }
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user && user.role) {
+    switch (user.role) {
+      case "usuario":
+        loginButton.href = "/perfil-usuario";
+        loginButton.textContent = "Perfil";
+        break;
+      case "abogado":
+        loginButton.href = "/perfil-abogado";
+        loginButton.textContent = "Perfil";
+        break;
+      case "admin":
+        loginButton.href = "/perfil-admin";
+        loginButton.textContent = "Perfil";
+        break;
+      default:
+        console.error("Rol desconocido:", user.role);
+    }
   }
 });

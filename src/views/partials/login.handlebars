@@ -9,27 +9,29 @@
         </div>
         <form class="login-form" autocomplete="off">
             <div class="input-box">
-                <input type="text" class="input-field" id="log-email" required>
-                <label for="log-email" class="label">Email</label>
+                <input type="email" class="input-field" id="email" required>
+                <label for="email" class="label">Email</label>
                 <i class="bx bx-envelope icon"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" id="log-pass" required>
-                <label for="log-pass" class="label">Password</label>
+                <input type="password" class="input-field" id="password" required>
+                <label for="password" class="label">Password</label>
                 <i class="bx bx-lock-alt icon"></i>
             </div>
             <div class="form-cols">
                 <div class="col-1"></div>
                 <div class="col-2">
-                    <a href="#">Olvidaste tu contraseña?</a>
+                    <a href="/reset-password">Olvidaste tu contraseña?</a>
                 </div>
             </div>
             <div class="input-box">
                 <button class="btn-submit" id="SignInBtn">Iniciar sesión <i class="bx bx-log-in"></i></button>
             </div>
             <div class="switch-form">
-                <span>No tienes cuenta? <a href="/register" onclick="loginFunction()">Registrate</a></span>
+                <span>No tienes cuenta? <a href="/register">Registrate</a></span>
             </div>
         </form>
     </div>
 </section>
+
+<script src="/js/login.js"></script>
